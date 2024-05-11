@@ -10,6 +10,7 @@ import { useTheme } from './providers/ThemeProvider';
 
 import { AboutPageAsync } from 'pages/AboutPage';
 import { MainPageAsync } from 'pages/MainPage';
+import { AppRouter } from './providers/router';
 
 
 
@@ -22,12 +23,7 @@ const App = () => {
             <button onClick={toggleTheme}>TOGGLE</button>
             <Link to={'/'}>Главная</Link>
             <Link to={'/about'}>О сайте</Link>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutPageAsync />}/>
-                    <Route path={'/'} element={<MainPageAsync />}/>
-                </Routes>
-            </Suspense>
+        <AppRouter />
         </div>
     );
 };
