@@ -1,16 +1,17 @@
 import React, {Suspense, useContext, useState} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
-import './styles/index.scss';
+import 'app/styles/index.scss';
 
-import {Theme, ThemeContext} from "./providers/ThemeProvider/lib/ThemeContext";
+import {Theme, ThemeContext} from "app/providers/ThemeProvider/lib/ThemeContext";
 
-import {classNames} from "../shared/config/lib/classNames";
-import { useTheme } from './providers/ThemeProvider';
+import {classNames} from "../shared/lib/classNames";
+import { useTheme } from 'app/providers/ThemeProvider';
 
 
 import { AboutPageAsync } from 'pages/AboutPage';
 import { MainPageAsync } from 'pages/MainPage';
-import { AppRouter } from './providers/router';
+import { AppRouter } from 'app/providers/router';
+import { Navbar } from 'widgets/navbar';
 
 
 
@@ -20,9 +21,9 @@ const App = () => {
     const bool = true;
     return (
         <div className={classNames('app', {}, [theme])}>
+             <Navbar/>
             <button onClick={toggleTheme}>TOGGLE</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
+           
         <AppRouter />
         </div>
     );
