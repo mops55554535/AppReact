@@ -13,7 +13,7 @@ interface ThemeSwitcherProps {
 
 export const ThemeSwitcher = ({className} :ThemeSwitcherProps ) => {
     const { theme, toggleTheme } = useTheme();
-    const bool = true;
+    
     return (
     
         <Button theme={ThemeButton.CLEAR} className={

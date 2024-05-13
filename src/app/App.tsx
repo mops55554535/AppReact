@@ -12,6 +12,7 @@ import { AboutPageAsync } from 'pages/AboutPage';
 import { MainPageAsync } from 'pages/MainPage';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 
 
@@ -22,9 +23,10 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
              <Navbar/>
-        
-           
-        <AppRouter />
+            <div className="content-page">
+            <Sidebar />
+            <AppRouter />
+            </div>
         </div>
     );
 };

@@ -13,7 +13,12 @@ export default function  () {
               <Route
                key={path}
                path = {path}
-               element = {element}
+               element = {(
+              //element - компонент со страницей
+              <div className='page-wrapper'>
+                  {element}
+              </div>
+              )}
               />
             ))}
         </Routes>
