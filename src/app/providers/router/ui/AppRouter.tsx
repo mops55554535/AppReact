@@ -1,5 +1,4 @@
-import { AboutPageAsync } from 'pages/AboutPage'
-import { MainPageAsync } from 'pages/MainPage'
+
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { routeConfig } from 'shared/lib/routeConfid/routeConfid'
