@@ -9,7 +9,7 @@ i18next
   
   .init({
     fallbackLng: 'ru',
-    debug: __IS__DEV__,
+    debug: __IS_DEV__,
     backend: {
       // for all available options read the backend's repository readme file
       loadPath: '/locales/{{lng}}/{{ns}}.json'

@@ -3,7 +3,7 @@ import {Link, Route, Routes} from 'react-router-dom';
 import 'app/styles/index.scss';
 
 
-import {classNames} from "../shared/lib/classNames";
+import {classNames} from "../shared/lib/classNames/classNames";
 import { useTheme } from 'app/providers/ThemeProvider';
 
 
