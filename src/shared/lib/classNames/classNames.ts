@@ -9,4 +9,8 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
             .map(([className]) => className),
     ]
         .join(' ');
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 09b019a (Add tests ESlint)

@@ -5,6 +5,7 @@
 
 .app {
     font: var(--font-m);
+<<<<<<< HEAD
 
     background: var(--bg-color);
     color: var(--primary-color); 
@@ -15,6 +16,18 @@
     display: flex;
 }
 .page-wrapper{
+=======
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+}
+
+.content-page {
+    display: flex;
+}
+
+.page-wrapper {
+>>>>>>> 09b019a (Add tests ESlint)
     flex-grow: 1;
     padding: 20px;
 }

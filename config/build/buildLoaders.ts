@@ -70,4 +70,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         typescriptLoader,
         cssLoader,
     ];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 09b019a (Add tests ESlint)

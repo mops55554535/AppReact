@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+/*
+ * For a detailed explanation regarding each configuration property and type check, visit:
+ * https://jestjs.io/docs/configuration
+ */
+
+>>>>>>> 09b019a (Add tests ESlint)
 import path from 'path';
 
 export default {
@@ -185,4 +193,8 @@ export default {
 
     // Whether to use watchman for file crawling
     // watchman: true,
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 09b019a (Add tests ESlint)

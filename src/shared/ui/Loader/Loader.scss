@@ -49,4 +49,22 @@
     0% {
         transform: scale(1);
     }
+<<<<<<< HEAD
 }
+=======
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+>>>>>>> 09b019a (Add tests ESlint)

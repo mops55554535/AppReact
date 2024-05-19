@@ -39,6 +39,6 @@
     }
   },
   // "include": [
-  //   "./config/jest/setupTest.ts"
+  //   "./config/jest/setupTests.ts"
   // ]
 }
