@@ -9,8 +9,4 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
         mainFiles: ['index'],
         alias: {},
     };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 09b019a (Add tests ESlint)

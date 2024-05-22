@@ -25,8 +25,4 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
     };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 09b019a (Add tests ESlint)

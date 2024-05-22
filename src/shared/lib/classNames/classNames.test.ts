@@ -37,8 +37,4 @@ describe('classNames', () => {
             ['class1', 'class2'],
         )).toBe(expected);
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 09b019a (Add tests ESlint)

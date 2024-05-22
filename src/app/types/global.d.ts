@@ -16,8 +16,4 @@ declare module '*.svg' {
     export default SVG;
 }
 
-<<<<<<< HEAD
 declare const __IS_DEV__: boolean;
-=======
-declare const __IS_DEV__: boolean;
->>>>>>> 09b019a (Add tests ESlint)

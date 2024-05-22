@@ -22,8 +22,4 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
             openAnalyzer: false,
         }),
     ];
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 09b019a (Add tests ESlint)

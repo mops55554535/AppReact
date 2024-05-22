@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from "./Sidebar.module.scss"
-import { useState } from 'react';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
-
-interface SidebarProps {
-    className?: string;
-
-}
-
-export const Sidebar = ({className} :SidebarProps ) => {
-    const [collapsed, setCollapsed] = useState(false)
-    
-    // callback принимающий предыдущее значение 
-    const onToggle = () =>{
-        setCollapsed(prev => !prev)
-    }
-    
-  return (
-    //если collapsed = true то класс добавляется 
-    <div className = {classNames(cls.Sidebar,{ [cls.collapsed]: collapsed}, [className])} >
-        <button onClick={onToggle}>toggle</button>
-        <div className={cls.switchers}> <ThemeSwitcher/> <LangSwitcher className={cls.lang}/> </div>
-      
-    </div>
-  )
-}
-=======
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
@@ -64,4 +34,3 @@ export const Sidebar = ({ className }: SidebarProps) => {
         </div>
     );
 };
->>>>>>> 09b019a (Add tests ESlint)

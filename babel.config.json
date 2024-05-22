@@ -12,8 +12,4 @@
   "plugins": [
     "i18next-extract"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 09b019a (Add tests ESlint)

@@ -24,8 +24,4 @@ export default (env: BuildEnv) => {
     });
 
     return config;
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 09b019a (Add tests ESlint)
