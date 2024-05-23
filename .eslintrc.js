@@ -1,32 +1,3 @@
-
-
-module.exports ={
-  env: {
-    browser: true,
-    es2021: true
-  },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions:{
-    ecmaFeatures:{
-      jsx:true,
-    },
-
-  ecmaVersion: 'latest',
-  sourceType: 'module'
-},
-plugins: [
-  'react',
-  '@typescript-eslint',
-],
-rules: {
-
-}
-}
-
 module.exports = {
     env: {
         browser: true,
@@ -74,7 +45,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid'],
+                ignoreAttribute: ['data-testid', 'to'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
