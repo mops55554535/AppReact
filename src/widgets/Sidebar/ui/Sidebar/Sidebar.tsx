@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next';
 import cls from './Sidebar.module.scss';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import MainIcon from "../../../../shared/assets/icons/main-20-20.svg"
+import AboutIcon from "../../../../shared/assets/icons/about-20-20.svg"
 
 interface SidebarProps {
     className?: string;
@@ -38,19 +40,33 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 {}
             </Button>
             <div className={cls.items}>
-            <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main} className={cls.link}>
-                {t('Главная')}
-            </AppLink>
+                <div >
+               
+               <AppLink theme={AppLinkTheme.SECONDARY}
+                        to={RoutePath.main}
+                        className={cls.item} >
 
-            <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}  className={cls.link}>
-                {t('О сайте')}
-            </AppLink>
-            </div>
+                <MainIcon className={cls.icon} />
+                          <span className={cls.link}>{t('Главная')}</span>   
+                </AppLink>
+          </div>
+          <div >
+               
+               <AppLink theme={AppLinkTheme.SECONDARY}
+                        to={RoutePath.about}
+                        className={cls.item} >
 
+                <AboutIcon className={cls.icon} />
+                          <span className={cls.link}>{t('О сайте')}</span>   
+                </AppLink>
+          </div>
+           </div>
+ 
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher short={collapsed} className={cls.lang} />
             </div>
-        </div>
+       
+    </div>
     );
 };
