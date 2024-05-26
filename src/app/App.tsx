@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import './styles/index.scss';
+
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
@@ -13,10 +13,8 @@ function App() {
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
-                <Navbar />
-                <button onClick={() => setIsOpen(true)}>toggle</button>
-                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}/>
-                <div className="content-page">
+                <Navbar /> 
+                  <div className="content-page">
                     <Sidebar />
                     <AppRouter />
                 </div>
@@ -26,3 +24,6 @@ function App() {
 }  
 
 export default App;
+
+
+
