@@ -1,10 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
-import cls from './Navbar.module.scss';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { useCallback, useState } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
+import React, { useCallback, useState } from 'react';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
@@ -12,18 +11,25 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
-    const [isAuthModal, setIsAuthModal]= useState(false)
+    const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = useCallback(() =>{
-        setIsAuthModal((prev) => !prev)
-    }, [])
+    const onToggleModal = useCallback(() => {
+        setIsAuthModal((prev) => !prev);
+    }, []);
+
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <Button theme={ButtonTheme.CLEAR__INVERTED} className={cls.links} onClick={onToggleModal} > 
-         {t("Войти")}
+            <Button
+                theme={ButtonTheme.CLEAR_INVERTED}
+                className={cls.links}
+                onClick={onToggleModal}
+            >
+                {t('Войти')}
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>31313123131313131315412-15471-124-57814-78</Modal>
+            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                {/* eslint-disable-next-line */}
+                {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.')}
+            </Modal>
         </div>
     );
 };
-
