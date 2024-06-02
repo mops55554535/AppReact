@@ -1,3 +1,3 @@
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from 'app/providers/StoreProvider';
 
-export const getProfileName =(state: StateSchema) => state?.profile?.data?.first || ''
+export const getProfileName = (state: StateSchema) => state?.profile?.data?.first || '';

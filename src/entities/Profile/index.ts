@@ -6,6 +6,5 @@ export {
     profileReducer,
 } from './model/slice/profileSlice';
 export {
-    ProfileCard
-} from './ui/ProfileCard/ProfileCard'
-
+    ProfileCard,
+} from './ui/ProfileCard/ProfileCard';

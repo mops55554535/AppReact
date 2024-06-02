@@ -17,15 +17,15 @@ interface ProfilePageProps {
 const ProfilePage = (props: ProfilePageProps) => {
     const { t } = useTranslation();
     const { className } = props;
-    const dispatch = useAppDispatch()
-    
-    useEffect(() =>{
-        dispatch(fetchProfileData())
-    }, [dispatch])
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(fetchProfileData());
+    }, [dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-           <ProfileCard />
+            <ProfileCard />
 
         </DynamicModuleLoader>
     );

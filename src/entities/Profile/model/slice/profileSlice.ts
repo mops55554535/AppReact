@@ -20,10 +20,9 @@ export const profileSlice = createSlice({
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(
-                fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
+            .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
                 state.isLoading = false;
-                state.data = action.payload
+                state.data = action.payload;
             })
             .addCase(fetchProfileData.rejected, (state, action) => {
                 state.isLoading = false;
@@ -31,7 +30,6 @@ export const profileSlice = createSlice({
             });
     },
 });
-
 
 // Action creators are generated for each case reducer function
 export const { actions: profileActions } = profileSlice;
