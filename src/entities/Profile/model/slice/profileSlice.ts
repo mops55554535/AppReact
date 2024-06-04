@@ -4,7 +4,7 @@ import { Profile, ProfileShema } from '../types/profile';
 import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 
 const initialState: ProfileShema = {
-    readonly: true,
+    readOnly: true,
     isLoading: false,
     error: undefined,
     data: undefined,
@@ -13,7 +13,17 @@ const initialState: ProfileShema = {
 export const profileSlice = createSlice({
     name: 'profile',
     initialState,
-    reducers: {},
+    reducers: {
+        setreadOnly: (state, action: PayloadAction<boolean>) =>{
+            state.readOnly = action.payload
+        },
+        upadateProfile: (state, action: PayloadAction<Profile>) =>{
+            state.data = {
+                ...state.data,
+                ...action.payload
+            } 
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchProfileData.pending, (state) => {
