@@ -1,4 +1,5 @@
-import { Country, CurrencyEnum } from 'shared/const/common';
+import { CurrencyEnum } from 'entities/Curruncy';
+import { Country } from 'shared/const/common';
 
 export interface Profile {
     first?: string,
@@ -13,6 +14,7 @@ export interface Profile {
 }
 export interface ProfileShema {
     data?: Profile,
+    form?: Profile,
     isLoading: boolean,
     error?: string,
     readOnly: boolean

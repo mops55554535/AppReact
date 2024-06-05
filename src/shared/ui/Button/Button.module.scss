@@ -11,6 +11,12 @@
     outline: none;
 }
 
+.outlineRed {
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
 .clearInverted {
     padding: 0;
     border: none;

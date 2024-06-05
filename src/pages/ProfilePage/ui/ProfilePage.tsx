@@ -7,6 +7,7 @@ import {
     fetchProfileData,
     getProfileData,
     getProfileError,
+    getProfileForm,
     getProfileIsLoading,
     getProfilereadOnly,
     profileActions,
@@ -33,16 +34,30 @@ const ProfilePage = (props: ProfilePageProps) => {
     useEffect(() => {
         dispatch(fetchProfileData());
     }, [dispatch]);
-    const data = useSelector(getProfileData);
+    const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readOnly = useSelector(getProfilereadOnly);
 
+
     const onChangeFirstName = useCallback((value?:string) => {
-        dispatch(profileActions.upadateProfile({first: value || ''}))
+        dispatch(profileActions.updateProfile({first: value || ''}))
     }, [])
+    const onChangeAge = useCallback((value?:string) => {
+        dispatch(profileActions.updateProfile({age: Number(value || 0)}))
+    }, [])
+    const onChangeCity = useCallback((value?:string) => {
+        dispatch(profileActions.updateProfile({city: value || ''}))
+    }, [])
+    
     const onChangeLastName = useCallback((value?:string) => {
-            dispatch(profileActions.upadateProfile({lastname: value || ''}))
+            dispatch(profileActions.updateProfile({lastname: value || ''}))
+        }, [])
+    const onChangeUserName = useCallback((value?:string) => {
+            dispatch(profileActions.updateProfile({username: value || ''}))
+        }, [])
+    const onChangeAvatar = useCallback((value?:string) => {
+            dispatch(profileActions.updateProfile({avatar: value || ''}))
         }, [])
     
     return (
@@ -51,7 +66,7 @@ const ProfilePage = (props: ProfilePageProps) => {
             <ProfileCard
                 onChangeFirstName= {onChangeFirstName}
                 onChangeLastName={onChangeLastName}
-                IsLoading={isLoading} error={error} readOnly={readOnly as boolean} data={data}/>
+                IsLoading={isLoading} onChangeUserName= {onChangeUserName} onChangeAvatar={onChangeAvatar} onChangeCity={onChangeCity} onChangeAge={onChangeAge} error={error} readOnly={readOnly as boolean} data={formData}/>
 
         </DynamicModuleLoader> 
     );
