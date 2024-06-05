@@ -1,5 +1,5 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { ChangeEvent, memo, ReactNode, useMemo } from 'react';
+import { ChangeEvent, memo, useMemo } from 'react';
 import cls from './Select.module.scss';
 
 export interface SelectOption {
@@ -13,8 +13,7 @@ interface SelectProps {
     options?: SelectOption[];
     value?: string;
     onChange?: (value: string) => void;
-    readOnly?: boolean;
-    children?: ReactNode
+    readonly?: boolean;
 }
 
 export const Select = memo((props: SelectProps) => {
@@ -24,7 +23,7 @@ export const Select = memo((props: SelectProps) => {
         options,
         onChange,
         value,
-        readOnly,
+        readonly,
     } = props;
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -53,7 +52,7 @@ export const Select = memo((props: SelectProps) => {
                 </span>
             )}
             <select
-                disabled={readOnly}
+                disabled={readonly}
                 className={cls.select}
                 value={value}
                 onChange={onChangeHandler}
