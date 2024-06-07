@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import { getProfileError } from './getProfileError';
 
 describe('getProfileError.test', () => {
@@ -10,7 +10,6 @@ describe('getProfileError.test', () => {
                 error: '123',
             },
         };
-
         expect(getProfileError(state as StateSchema)).toEqual('123');
     });
     test('should work with empty state', () => {

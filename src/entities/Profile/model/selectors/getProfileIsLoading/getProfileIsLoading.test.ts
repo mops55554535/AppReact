@@ -1,6 +1,4 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Currency } from 'entities/Currency';
-import { Country } from 'entities/Country';
 import { getProfileIsLoading } from './getProfileIsLoading';
 
 describe('getProfileIsLoading.test', () => {
@@ -10,7 +8,6 @@ describe('getProfileIsLoading.test', () => {
                 isLoading: true,
             },
         };
-
         expect(getProfileIsLoading(state as StateSchema)).toEqual(true);
     });
     test('should work with empty state', () => {

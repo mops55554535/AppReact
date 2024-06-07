@@ -4,17 +4,17 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { fetchProfileData } from './fetchProfileData';
 
-describe('fetchProfileData.test', () => {
-    const data = {
-        username: 'admin',
-        age: 22,
-        country: Country.Ukraine,
-        lastname: 'ulbi tv',
-        first: 'asd',
-        city: 'asf',
-        currency: Currency.USD,
-    };
+const data = {
+    username: 'admin',
+    age: 22,
+    country: Country.Ukraine,
+    lastname: 'ulbi tv',
+    first: 'asd',
+    city: 'asf',
+    currency: Currency.USD,
+};
 
+describe('fetchProfileData.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
@@ -26,7 +26,7 @@ describe('fetchProfileData.test', () => {
         expect(result.payload).toEqual(data);
     });
 
-    test('error', async () => {
+    test('error login', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData);
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk();

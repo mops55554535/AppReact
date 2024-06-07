@@ -16,11 +16,11 @@ export const validateProfileData = (profile?: Profile) => {
     }
 
     if (!age || !Number.isInteger(age)) {
-        errors.push(ValidateProfileError.INCORRECT_USER_AGE);
+        errors.push(ValidateProfileError.INCORRECT_AGE);
     }
 
     if (!country) {
-        errors.push(ValidateProfileError.INCORRECT_USER_COUNTRY);
+        errors.push(ValidateProfileError.INCORRECT_COUNTRY);
     }
 
     return errors;
