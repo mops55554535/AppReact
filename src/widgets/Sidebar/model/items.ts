@@ -35,5 +35,5 @@ export const SidebarItemsList: SidebarItemType[] = [
         text: 'Статья',
         authOnly: true,
     },
-   
+
 ];
