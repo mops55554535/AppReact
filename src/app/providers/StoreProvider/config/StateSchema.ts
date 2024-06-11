@@ -11,6 +11,7 @@ import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 import { AppDispatch } from 'app/providers/StoreProvider';
 import { articleDetailsShema } from 'entities/Article';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -19,7 +20,8 @@ export interface StateSchema {
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
-    articleDetails?: articleDetailsShema
+    articleDetails?: articleDetailsShema;
+    articleDetailsComments?: ArticleDetailsCommentsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
