@@ -6,9 +6,9 @@ import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { send } from 'process';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
-import { getAddCommentFormText, getAddCommentFormError } from '../../model/selectors/addCommentFromSelectors';
+import { getAddCommentFormText, getAddCommentFormError }
+    from '../../model/selectors/addCommentFromSelectors';
 import cls from './AddCommentFrom.module.scss';
 
 export interface AddCommentFormProps {
