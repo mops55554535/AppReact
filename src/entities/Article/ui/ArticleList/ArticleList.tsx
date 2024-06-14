@@ -13,11 +13,11 @@ interface ArticleListProps {
     view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
-    .fill(0)
-    .map((item, index) => (
-        <ArticleListItemSkeleton className={cls.card} key={item} view={view} />
-    ));
+// const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+//     .fill(0)
+//     .map((item, index) => (
+//         <ArticleListItemSkeleton className={cls.card} key={item} view={view} />
+//     ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
@@ -31,7 +31,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     if (isLoading) {
         return (
             <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {getSkeletons(view)}
+                {/* {getSkeletons(view)} */}
             </div>
         );
     }
