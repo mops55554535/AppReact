@@ -29,7 +29,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     const onOpenArticle = useCallback(() => {
         navigate(RoutePath.articles_details + article.id);
-    }, [article.id, navigate]); 
+    }, [article.id, navigate]);
 
     const types = <Text text={article.type.join(', ')} className={cls.types} />;
     const views = (
