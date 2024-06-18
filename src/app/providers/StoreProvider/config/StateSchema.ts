@@ -19,7 +19,7 @@ import { SaveScrollShema } from 'features/SaveScroll';
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
-    saveScroll: SaveScrollShema; 
+    saveScroll: SaveScrollShema;
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
