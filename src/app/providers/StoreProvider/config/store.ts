@@ -7,6 +7,7 @@ import { NavigateOptions } from 'react-router';
 import { CombinedState, Reducer } from 'redux';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
+import { saveScrollReducer } from 'features/SaveScroll';
 
 export function createReduxStore(
     initialState?: StateSchema,
@@ -17,6 +18,7 @@ export function createReduxStore(
         ...asyncReducers,
         counter: counterReducer,
         user: userReducer,
+        saveScroll: saveScrollReducer
     };
 
     const reducerManager = createReducerManager(rootReducers);
