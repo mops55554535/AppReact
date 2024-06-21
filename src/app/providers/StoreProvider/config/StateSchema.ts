@@ -10,8 +10,8 @@ import { AxiosInstance } from 'axios';
 import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 import { AppDispatch } from 'app/providers/StoreProvider';
-import { articleDetailsShema } from 'entities/Article';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { ArticleDetailsSchema } from 'entities/Article';
+import { ArticleDetailsCommentsSchema, ArticleDetailsPageSchema, ArticleDetailsRecommendationsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormShema } from 'features/AddCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 import { SaveScrollShema } from 'features/SaveScroll';
@@ -23,10 +23,11 @@ export interface StateSchema {
     // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
-    articleDetails?: articleDetailsShema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
-    addCommentForm?: AddCommentFormShema
-    articlesPage?: ArticlePageSchema
+    articleDetails?: ArticleDetailsSchema;
+
+    addCommentForm?: AddCommentFormShema;
+    articlesPage?: ArticlePageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

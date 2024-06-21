@@ -3,7 +3,7 @@ export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 export {
     Article, ArticleSortField, ArticleView, ArticleType,
 } from './model/types/article';
-export type { articleDetailsShema } from './model/types/articleDetailsShema';
+export type { ArticleDetailsSchema } from './model/types/articleDetailsShema';
 
 export { ArticleList } from './ui/ArticleList/ArticleList';
 

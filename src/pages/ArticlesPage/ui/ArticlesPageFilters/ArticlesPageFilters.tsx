@@ -72,7 +72,7 @@ const ArticlesPageFilters = (props: ArticlesPageFiltersProps) => {
     }, [dispatch, debounceFetchData]);
 
     const onChangeType = useCallback((value: ArticleType) => {
-        dispatch(articlesPageActions.setSearch(value));
+        dispatch(articlesPageActions.setType(value));
         dispatch(articlesPageActions.setPage(1));
         debounceFetchData();
     }, [dispatch, debounceFetchData]);
