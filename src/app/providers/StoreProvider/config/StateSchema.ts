@@ -11,7 +11,10 @@ import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 import { AppDispatch } from 'app/providers/StoreProvider';
 import { ArticleDetailsSchema } from 'entities/Article';
-import { ArticleDetailsCommentsSchema, ArticleDetailsPageSchema, ArticleDetailsRecommendationsSchema } from 'pages/ArticleDetailsPage';
+import {
+    ArticleDetailsPageSchema,
+}
+    from 'pages/ArticleDetailsPage';
 import { AddCommentFormShema } from 'features/AddCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 import { SaveScrollShema } from 'features/SaveScroll';
