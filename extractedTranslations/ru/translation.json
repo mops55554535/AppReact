@@ -1,6 +1,7 @@
 {
   "ARTICLE DETAILED": "ARTICLE DETAILED",
   "All": "All",
+  "App": "App",
   "Article Details": "Article Details",
   "Article Details131231": "Article Details131231",
   "ArticleCodeBlockComponents": "ArticleCodeBlockComponents",
@@ -15,6 +16,7 @@
       "": ""
     }
   },
+  "New article": "New article",
   "PROFILE PAGE": "PROFILE PAGE",
   "SCIENCE": "SCIENCE",
   "decrement": "decrement",

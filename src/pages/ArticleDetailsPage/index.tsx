@@ -3,3 +3,4 @@ export { ArticleDetailsPageAsync as ArticleDetailsPage }
 export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
 export { ArticleDetailsRecommendationsSchema } from './model/types/articleDetailsPageRecommendationShema';
 export { ArticleDetailsPageSchema } from './model/types';
+export { getCanEditArticle } from './model/selectors/article';
