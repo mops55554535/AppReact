@@ -1,14 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AxiosInstance } from 'axios';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { Article, ArticleType } from 'entities/Article';
+import { Article } from 'entities/Article';
 
-export const fetchArticlesRecommendations = createAsyncThunk<
+export const fetchArticleRecommendations = createAsyncThunk<
     Article[],
     void,
     ThunkConfig<string>
     >(
-        'articlePage/fetchArticlesRecommendations',
+        'articleDetailsPage/fetchArticleRecommendations',
         async (props, thunkApi) => {
             const { extra, rejectWithValue } = thunkApi;
 

@@ -1,58 +1,58 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/addCommentFormSlice';
-import { getAddCommentFormText, getAddCommentFormError }
-    from '../../model/selectors/addCommentFromSelectors';
-import cls from './AddCommentFrom.module.scss';
+import { getAddCommentFormError, getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
     className?: string;
-    onSendComment: (text : string) => void
+    onSendComment: (text: string) => void;
 }
 
-const AddCommentForm = (props: AddCommentFormProps) => {
-    const { t } = useTranslation();
+const reducers: ReducersList = {
+    addCommentForm: addCommentFormReducer,
+};
+
+const AddCommentForm = memo((props: AddCommentFormProps) => {
     const { className, onSendComment } = props;
+    const { t } = useTranslation();
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
-
     const dispatch = useAppDispatch();
-    const reducers: ReducersList = {
-        addCommentForm: addCommentFormReducer,
-    };
-    const onCommetTextChange = useCallback((text: string) => {
-        dispatch(addCommentFormActions.setText(text));
+
+    const onCommentTextChange = useCallback((value: string) => {
+        dispatch(addCommentFormActions.setText(value));
     }, [dispatch]);
 
     const onSendHandler = useCallback(() => {
         onSendComment(text || '');
-        onCommetTextChange('');
-    }, [onSendComment, onCommetTextChange, text]);
+        onCommentTextChange('');
+    }, [onCommentTextChange, onSendComment, text]);
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
-                    placeholder={t('Ведите текст комментария')}
                     className={cls.input}
+                    placeholder={t('Введите текст комментария')}
                     value={text}
-                    onChange={onCommetTextChange}
-
+                    onChange={onCommentTextChange}
                 />
                 <Button
+                    theme={ButtonTheme.OUTLINE}
                     onClick={onSendHandler}
                 >
                     {t('Отправить')}
                 </Button>
             </div>
         </DynamicModuleLoader>
-
     );
-};
+});
+
 export default AddCommentForm;

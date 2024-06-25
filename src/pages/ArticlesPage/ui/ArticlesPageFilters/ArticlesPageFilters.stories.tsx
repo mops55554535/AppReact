@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import ArticlesPageFilters from './ArticlesPageFilters';
+import { ArticlesPageFilters } from './ArticlesPageFilters';
 
 export default {
     title: 'pages/Article/ArticlesPageFilters',

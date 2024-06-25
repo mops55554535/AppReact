@@ -9,7 +9,6 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-import { profile } from 'console';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -71,14 +70,10 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                                 >
                                     {t('Сохранить')}
                                 </Button>
-
                             </>
                         )}
-
                 </div>
-
             )}
-
         </div>
     );
 };

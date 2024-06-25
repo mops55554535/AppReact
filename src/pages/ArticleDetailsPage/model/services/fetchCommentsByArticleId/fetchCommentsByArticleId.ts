@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AxiosInstance } from 'axios';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Comment } from 'entities/Comment';
 
@@ -17,7 +16,7 @@ export const fetchCommentsByArticleId = createAsyncThunk<
             }
 
             try {
-                const response = await extra.api.get<Comment[]>('/comments/', {
+                const response = await extra.api.get<Comment[]>('/comments', {
                     params: {
                         articleId,
                         _expand: 'user',
