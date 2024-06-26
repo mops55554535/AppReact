@@ -10,6 +10,7 @@ import { Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
 import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
+import { HStack, VStack } from 'shared/ui/Stack';
 
 interface ProfileCardProps {
     className?: string;
@@ -55,14 +56,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+            <HStack justify={'center'} max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('Произошла ошибка при загрузке профиля')}
                     text={t('Попробуйте обновить страницу')}
                     align={TextAlign.CENTER}
                 />
-            </div>
+            </HStack>
         );
     }
 
@@ -71,12 +72,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <div className={classNames(cls.ProfileCard, mods, [className])}>
-            <div className={cls.data}>
+        <VStack gap={'8'} max className={classNames(cls.ProfileCard, mods, [className])}>
+         
                 {data?.avatar && (
-                    <div className={cls.avatarWrapper}>
+                    <HStack justify={'center'} className={cls.avatarWrapper}>
                         <Avatar src={data?.avatar} />
-                    </div>
+                    </HStack>
                 )}
                 <Input
                     value={data?.first}
@@ -132,7 +133,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     onChange={onChangeCountry}
                     readonly={readonly}
                 />
-            </div>
-        </div>
+            </VStack>
+      
     );
 };
