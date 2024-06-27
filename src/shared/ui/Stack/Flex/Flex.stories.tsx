@@ -20,8 +20,8 @@ Row.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 
 export const Column = Template.bind({});
 Column.args = {
@@ -32,8 +32,8 @@ Column.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 
 export const Rowgap4 = Template.bind({});
 Rowgap4.args = {
@@ -44,8 +44,8 @@ Rowgap4.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 export const Rowgap8 = Template.bind({});
 Rowgap8.args = {
     gap: '8',
@@ -55,8 +55,8 @@ Rowgap8.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 export const Rowgap16 = Template.bind({});
 Rowgap16.args = {
     gap: '16',
@@ -66,8 +66,8 @@ Rowgap16.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 export const Rowgap32 = Template.bind({});
 Rowgap32.args = {
     gap: '32',
@@ -77,8 +77,8 @@ Rowgap32.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};
 export const ColumnGap16 = Template.bind({});
 ColumnGap16.args = {
     gap: '16',
@@ -89,5 +89,5 @@ ColumnGap16.args = {
             <div className="">313231</div>
             <div className="">1313</div>
         </>
-    )
-}
+    ),
+};

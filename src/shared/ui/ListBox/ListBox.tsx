@@ -62,7 +62,7 @@ export function ListBox(props: ListBoxProps) {
                     {items?.map((item) => (
                         <HListBox.Option
                             key={item.value}
-                            value={item.value}  
+                            value={item.value}
                             disabled={item.disabled}
                             as={Fragment}
                         >
