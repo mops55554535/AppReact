@@ -1,5 +1,5 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
+import { memo, ReactNode } from 'react';
 import cls from './Text.module.scss';
 
 export enum TextTheme {
@@ -27,6 +27,7 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
+
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3'
@@ -45,6 +46,7 @@ export const Text = memo((props: TextProps) => {
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
         size = TextSize.M,
+
     } = props;
 
     const HeaderTagType = mapSizeToHeaderTagType[size];
