@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { useParams } from 'react-router-dom';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
@@ -99,6 +98,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                         key={err}
                         theme={TextTheme.ERROR}
                         text={validateErrorTranslates[err]}
+                        data-testid="EditableProfileCard.Error"
                     />
                 ))}
                 <ProfileCard
