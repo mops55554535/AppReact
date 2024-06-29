@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    cursor: pointer;
 }
 
 .menu {
@@ -15,57 +16,23 @@
     position: absolute;
     z-index: 10000;
     border-radius: 8px;
-    border-radius: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     flex-direction: column;
     display: flex;
 }
 
-// .item {
-//     padding: 10px 25px;
-//     width: 100%;
-//     border: none;
-//     background: none;
-//     outline: none;
-//     color: (--primary-color);
-//     cursor: pointer;
-// }
-
-// .active {
-//     background: var(--inverted-primary-color);
-// }
-
-// listCopy
-
-.ListBox {
-    position: relative;
-}
-
-.trigger {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-}
-
-.options {
-    background: var(--listbox-bg);
-    position: absolute;
-    z-index: 10000;
-    border-radius: 12px;
-    box-shadow: 4px 4px 8px var(--listbox-bg);
-}
-
 .item {
-    padding: 10px 20px;
+    padding: 10px 25px;
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 .active {
     background: var(--inverted-primary-color);
-}
-
-.disabled {
-    opacity: 0.7;
 }
 
 .optionsBottomLeft {
@@ -78,12 +45,12 @@
     left: 0;
 }
 
-.optionsTopLeft {
-    bottom: 100%;
-    right: 0;
-}
-
 .optionsTopRight {
     bottom: 100%;
     left: 0;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
 }
