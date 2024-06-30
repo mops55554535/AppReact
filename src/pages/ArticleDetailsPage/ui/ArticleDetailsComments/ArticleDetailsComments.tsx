@@ -4,9 +4,10 @@ import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/addCommentForm';
 import { CommentList } from 'entities/Comment';
 import { useDispatch, useSelector } from 'react-redux';
-import { useCallback } from 'react';
+import { Suspense, useCallback } from 'react';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { VStack } from 'shared/ui/Stack';
+import { Loader } from 'shared/ui/Loader/Loader';
 import
 {
     fetchCommentsByArticleId,
@@ -18,7 +19,7 @@ import { getArticleComments } from '../../model/slices/articleDetailsCommentsSli
 
 interface ArticleDetailsCommentsProps {
     className?: string
-    id: string
+    id?: string
 }
 
 export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
@@ -41,7 +42,9 @@ export const ArticleDetailsComments = (props: ArticleDetailsCommentsProps) => {
                 size={TextSize.L}
                 title={t('Комментарии')}
             />
-            <AddCommentForm onSendComment={onSendComment} />
+            <Suspense fallback={<Loader />}>
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}
                 comments={comments}
