@@ -2,17 +2,17 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { NotificationsButton } from './NotificationsButton';
+import { NotificationButton } from './NotificationsButton';
 
 export default {
     title: 'features/NotificationsButton',
-    component: NotificationsButton,
+    component: NotificationButton,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof NotificationsButton>;
+} as ComponentMeta<typeof NotificationButton>;
 
-const Template: ComponentStory<typeof NotificationsButton> = () => <NotificationsButton />;
+const Template: ComponentStory<typeof NotificationButton> = () => <NotificationButton />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
