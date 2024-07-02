@@ -1,16 +1,16 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import {
     MutableRefObject, useCallback, useEffect, useRef, useState,
 } from 'react';
 
-export interface useModalProps {
-    onClose?: () => void,
-    isOpen?: boolean,
-    animationDelay: number
+interface UseModalProps {
+    onClose?: () => void;
+    isOpen?: boolean;
+    animationDelay: number;
 }
 
-export function useModal(props: useModalProps) {
-    const { onClose, isOpen, animationDelay } = props;
+export function useModal({
+    animationDelay, isOpen, onClose,
+}: UseModalProps) {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
@@ -29,7 +29,7 @@ export function useModal(props: useModalProps) {
                 setIsClosing(false);
             }, animationDelay);
         }
-    }, [onClose, animationDelay]);
+    }, [animationDelay, onClose]);
 
     // Новые ссылки!!!
     const onKeyDown = useCallback((e: KeyboardEvent) => {
@@ -48,7 +48,10 @@ export function useModal(props: useModalProps) {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
+
     return {
-        isClosing, isMounted, close,
+        isClosing,
+        isMounted,
+        close,
     };
 }

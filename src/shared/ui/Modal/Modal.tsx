@@ -1,10 +1,10 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { ReactNode } from 'react';
-import { useTheme } from 'app/providers/ThemeProvider';
-import { useModal } from 'shared/lib/hooks/useModal/useModal';
+import React, { ReactNode } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { useTheme } from '@/app/providers/ThemeProvider';
+import { useModal } from '@/shared/lib/hooks/useModal/useModal';
+import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
-import { Overlay } from '../Overlay/Overlay';
 
 interface ModalProps {
     className?: string;
@@ -17,7 +17,6 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-    const { theme } = useTheme();
     const {
         className,
         children,
@@ -25,12 +24,19 @@ export const Modal = (props: ModalProps) => {
         onClose,
         lazy,
     } = props;
-    const
-        {
-            isClosing,
-            isMounted,
-            close,
-        } = useModal({ animationDelay: ANIMATION_DELAY, onClose, isOpen });
+
+    const {
+        close,
+        isClosing,
+        isMounted,
+    } = useModal({
+        animationDelay: ANIMATION_DELAY,
+        onClose,
+        isOpen,
+    });
+
+    const { theme } = useTheme();
+
     const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
@@ -43,14 +49,12 @@ export const Modal = (props: ModalProps) => {
     return (
         <Portal>
             <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
-                <Overlay onClick={close}>
-                    <div
-                        className={cls.content}
-
-                    >
-                        {children}
-                    </div>
-                </Overlay>
+                <Overlay onClick={close} />
+                <div
+                    className={cls.content}
+                >
+                    {children}
+                </div>
             </div>
         </Portal>
     );
