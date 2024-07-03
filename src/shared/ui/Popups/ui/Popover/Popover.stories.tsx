@@ -17,5 +17,14 @@ export default {
 
 const Template: ComponentStory<typeof Popover> = (args) => <Popover {...args} />;
 
-export const topLeft = Template.bind({});
-topLeft.args = {};
+export const topLeft = Template.bind({
+});
+topLeft.args = {
+    trigger: 'Popover',
+    children: <>
+        <div>option1</div>
+        <div>option2</div>
+        <div>option3</div>
+    </> 
+    
+};
