@@ -14,7 +14,6 @@ const MainPage = () => {
     return (
         <div>
             {t('Главная страница')}
-            <RatingCard title={t('feedback')} feedbackTitle={t('feedbackTitle')} hasFeedback />
         </div>
     );
 };

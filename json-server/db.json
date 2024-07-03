@@ -33,18 +33,6 @@
       "userId": "2"
     }
   ],
-  "posts": [
-    {
-      "id": "1",
-      "title": "json-server",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "title": "json-server",
-      "userId": "2"
-    }
-  ],
   "articles": [
     {
       "id": "1",
@@ -530,7 +518,7 @@
       "id": "18",
       "title": "Научная статья - Биология",
       "subtitle": "БиологиЯ",
-      "img": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -657,14 +645,62 @@
     {
       "articleId": "7",
       "userId": "1",
-      "text": "131313",
-      "id": "a-HBY8i"
+      "text": "112",
+      "id": "wSAhqy5"
+    },
+    {
+      "articleId": "18",
+      "userId": "1",
+      "text": "12",
+      "id": "r6b1z-N"
+    },
+    {
+      "articleId": "18",
+      "userId": "2",
+      "text": "привет",
+      "id": "DENfTu6"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "33",
+      "id": "Ps59wrg"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "zzYVth3"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "123",
+      "id": "WjF4c_d"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "privet",
+      "id": "fta748h"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "питон топ",
+      "id": "ZlmlUrg"
     },
     {
       "articleId": "7",
       "userId": "1",
-      "text": "13131313131",
-      "id": "kj1yezL"
+      "text": "123",
+      "id": "KmtWJR_"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "122122",
+      "id": "QnVRo30"
     }
   ],
   "users": [
@@ -675,7 +711,7 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg"
+      "avatar": "https://avatars.githubusercontent.com/u/98763706?v=4"
     },
     {
       "id": "2",
@@ -687,7 +723,7 @@
       "avatar": "https://avatars.githubusercontent.com/u/98763706?v=4"
     },
     {
-      "id": "2",
+      "id": "3",
       "username": "manager",
       "password": "123",
       "roles": [
@@ -699,11 +735,11 @@
   "profile": [
     {
       "id": "1",
-      "first": "42424234",
-      "lastname": "asfewr",
+      "first": "timur13131313",
+      "lastname": "ulbi",
       "age": 465,
-      "currency": "EUR",
-      "country": "Armenia",
+      "currency": "RUB",
+      "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg"
@@ -713,11 +749,112 @@
       "first": "ulbi tv",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "EUR",
+      "country": "Ukraine",
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://avatars.githubusercontent.com/u/98763706?v=4"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "feedback": "",
+      "id": "wAa3Y1e"
+    },
+    {
+      "userId": "1",
+      "articleId": "13",
+      "rate": 5,
+      "feedback": "13112313131313123",
+      "id": "Cum1beB"
+    },
+    {
+      "userId": "1",
+      "articleId": "18",
+      "rate": 5,
+      "id": "E-9zLSZ"
+    },
+    {
+      "userId": "2",
+      "articleId": "14",
+      "rate": 5,
+      "feedback": "13131231313",
+      "id": "1cZXnsN"
+    },
+    {
+      "userId": "2",
+      "articleId": "18",
+      "rate": 5,
+      "feedback": "`2`2``2`2``2",
+      "id": "_tizqhA"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "userId": "1",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "Хороший профиль",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "profileId": "2",
+      "rate": 5,
+      "feedback": "Отличный профиль",
+      "id": 2
+    },
+    {
+      "userId": "2",
+      "profileId": "1",
+      "rate": 5,
+      "feedback": "Класс",
+      "id": 3
     }
   ]
 }
