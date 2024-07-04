@@ -17,6 +17,6 @@ const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children:<div className="">"div"</div>,
+    children: <div className="">div</div>,
 };
-Normal.decorators = [StoreDecorator({})]
+Normal.decorators = [StoreDecorator({})];

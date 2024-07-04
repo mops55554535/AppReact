@@ -9,7 +9,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof RatingCard>;
-RatingCard
+
 const Template: ComponentStory<typeof RatingCard> = (args) => <RatingCard {...args} />;
 
 export const Primary = Template.bind({});

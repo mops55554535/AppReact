@@ -21,10 +21,11 @@ export const topLeft = Template.bind({
 });
 topLeft.args = {
     trigger: 'Popover',
-    children: <>
+    children:
+    <>
         <div>option1</div>
         <div>option2</div>
         <div>option3</div>
-    </> 
-    
+    </>,
+
 };
