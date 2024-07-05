@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Page } from './Page';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { StoreProvider } from '@/app/providers/StoreProvider';
 
 export default {
     title: 'widgets/Page',
