@@ -7432,10 +7432,10 @@ eslint-plugin-react@^7.28.0, eslint-plugin-react@^7.29.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
-eslint-plugin-ulbi-tv-plugin@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.6.tgz"
-  integrity sha512-2xKQlPJgaPgd09JmcJl/qN8fSFC41+rqZZekcqUq5roGSN0sDcvuM505a6Mp8siv4XVLlCTtrcyjsyr0TPacXg==
+eslint-plugin-ulbi-tv-plugin@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.7.tgz"
+  integrity sha512-uq6CzDsrW8CJ9OHv+p1m3kpkj19whdr/9jQAfxK+5v/Ni+h01OdpeS09uB/cn7gOaCYxsT6r7cEVkG3609n6/A==
   dependencies:
     micromatch "^4.0.5"
     requireindex "^1.2.0"
