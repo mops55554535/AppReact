@@ -48,7 +48,6 @@ module.exports = {
             {
                 markupOnly: true,
                 ignoreAttribute: [
-                    'border',
                     'as',
                     'role',
                     'data-testid',
@@ -56,9 +55,10 @@ module.exports = {
                     'target',
                     'justify',
                     'align',
+                    'border',
                     'direction',
-                    'gap'],
-
+                    'gap',
+                ],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
@@ -71,11 +71,18 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
+        'ulbi-tv-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         'ulbi-tv-plugin/public-api-imports': [
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/*.StoreDecorator.tsx'],
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
             },
         ],
     },

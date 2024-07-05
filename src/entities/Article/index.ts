@@ -8,5 +8,4 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { getArticleDetailsData } from './model/selectors/articleDetails';
-export { articleDetailsReducer } from './model/slice/articleDetailsSlice';
 export { ArticleBlockType } from './model/consts/Articleconsts';
