@@ -1,4 +1,4 @@
-import { ChangeEvent, memo, useMemo } from 'react';
+import { ChangeEvent, useMemo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
 
@@ -16,7 +16,7 @@ interface SelectProps<T extends string> {
     readonly?: boolean;
 }
 
-export const Select =<T extends string> (props: SelectProps<T>) => {
+export const Select = <T extends string> (props: SelectProps<T>) => {
     const {
         className,
         label,
