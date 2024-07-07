@@ -729,7 +729,7 @@
       "roles": [
         "MANAGER"
       ],
-      "avatar": "https://avatars.githubusercontent.com/u/98763706?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/98763"
     }
   ],
   "profile": [
@@ -754,6 +754,17 @@
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://avatars.githubusercontent.com/u/98763706?v=4"
+    },
+    {
+      "id": "3",
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "EUR",
+      "country": "Ukraine",
+      "city": "Moscow",
+      "username": "ulbi tv",
+      "avatar": "https://avatars.githubusercontent.com/u/987637"
     }
   ],
   "article-ratings": [
