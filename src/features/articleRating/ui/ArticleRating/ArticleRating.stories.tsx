@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import withMock from 'storybook-addon-mock';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleRating from './ArticleRating';
 
@@ -11,7 +10,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [withMock],
 } as ComponentMeta<typeof ArticleRating>;
 
 const Template: ComponentStory<typeof ArticleRating> = (args) => <ArticleRating {...args} />;
@@ -19,13 +17,7 @@ export const Normal = Template.bind({});
 Normal.args = {
     articleId: '1',
 };
-Normal.decorators = [
-    StoreDecorator({
-        user: {
-            authData: { id: '1' },
-        },
-    }),
-];
+Normal.decorators = [StoreDecorator({ user: { authData: { id: '1' } } })],
 Normal.parameters = {
     mockData: [
         {
@@ -43,6 +35,7 @@ export const WithoutRate = Template.bind({});
 WithoutRate.args = {
     articleId: '1',
 };
+WithoutRate.decorators = [StoreDecorator({})];
 WithoutRate.decorators = [
     StoreDecorator({
         user: {
@@ -50,6 +43,7 @@ WithoutRate.decorators = [
         },
     }),
 ];
+
 WithoutRate.parameters = {
     mockData: [
         {
