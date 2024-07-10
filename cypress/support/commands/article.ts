@@ -18,7 +18,7 @@ export const createArticle = (article?: Article) => {
     return cy.request({
         method: 'POST',
         url: 'http://localhost:8000/articles',
-        headers: { Authorization: 'asasf' },
+        headers: { Authorization: '1212' },
         body: article ?? defaultArticle,
     }).then((resp) => resp.body);
 };
@@ -26,9 +26,10 @@ export const removeArticle = (articleId: string) => {
     return cy.request({
         method: 'DELETE',
         url: `http://localhost:8000/articles/${articleId}`,
-        headers: { Authorization: 'asasf' },
+        headers: { Authorization: '1212' },
     });
 };
+
 declare global {
     namespace Cypress {
       interface Chainable {

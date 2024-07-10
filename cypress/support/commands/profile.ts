@@ -1,8 +1,8 @@
 export const updateProfile = (firstname: string, lastname: string) => {
-    cy.getBytestId('EditableProfileCardHeader.EditButton').click();
-    cy.getBytestId('ProfileCard.firstname').clear().type(firstname);
-    cy.getBytestId('ProfileCard.lastname').clear().type(lastname);
-    cy.getBytestId('EditableProfileCardHeader.SaveButton').click();
+    cy.getByTestId('EditableProfileCardHeader.EditButton').click();
+    cy.getByTestId('ProfileCard.firstname').clear().type(firstname);
+    cy.getByTestId('ProfileCard.lastname').clear().type(lastname);
+    cy.getByTestId('EditableProfileCardHeader.SaveButton').click();
 };
 export const resetProfile = (profileId: string) => {
     return cy.request({

@@ -5,7 +5,7 @@ describe('Пользователь заходит на страницу стат
         cy.login();
         cy.createArticle().then((article) => {
             currentArticleId = article.id;
-            cy.visit(`articles/${article.id}`);
+            cy.visit(`articles/${currentArticleId}`);
         });
     });
     afterEach(() => {
