@@ -6,20 +6,15 @@ import StarIcon from '../../assets/icons/star.svg';
 
 interface StarRatingProps {
     className?: string;
-    onSelect?: (starsCount: number) => void,
-    size?: number,
-    selectedStars?: number
+    onSelect?: (starsCount: number) => void;
+    size?: number;
+    selectedStars?: number;
 }
 
 const stars = [1, 2, 3, 4, 5];
 
 export const StarRating = (props: StarRatingProps) => {
-    const {
-        className,
-        size = 30,
-        selectedStars = 0,
-        onSelect,
-    } = props;
+    const { className, size = 30, selectedStars = 0, onSelect } = props;
 
     const [currentStartsCount, setCurrentStartsCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
@@ -36,7 +31,9 @@ export const StarRating = (props: StarRatingProps) => {
     };
 
     const onClick = (starsCount: number) => () => {
-        if (!isSelected) { onSelect?.(starsCount); }
+        if (!isSelected) {
+            onSelect?.(starsCount);
+        }
         setCurrentStartsCount(starsCount);
         setIsSelected(true);
     };
@@ -48,7 +45,11 @@ export const StarRating = (props: StarRatingProps) => {
                     className={classNames(
                         cls.StarIcon,
                         { [cls.isSelected]: isSelected },
-                        [currentStartsCount >= starNumber ? cls.hovered : cls.normal],
+                        [
+                            currentStartsCount >= starNumber
+                                ? cls.hovered
+                                : cls.normal,
+                        ],
                     )}
                     Svg={StarIcon}
                     key={starNumber}
@@ -59,7 +60,6 @@ export const StarRating = (props: StarRatingProps) => {
                     onClick={onClick(starNumber)}
                     data-testid={`StarRating.${starNumber}`}
                     data-selected={currentStartsCount >= starNumber}
-
                 />
             ))}
         </div>

@@ -20,7 +20,6 @@ import {
     getRouteArticles,
     getRouteMain,
     getRouteProfile,
-
 } from '@/shared/const/router';
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {

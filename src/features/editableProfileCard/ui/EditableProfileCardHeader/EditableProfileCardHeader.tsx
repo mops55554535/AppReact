@@ -17,9 +17,7 @@ interface ProfilePageHeaderProps {
 }
 
 export const EditableProfileCardHeader = (props: ProfilePageHeaderProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
 
     const { t } = useTranslation('profile');
     const authData = useSelector(getUserAuthData);
@@ -41,40 +39,40 @@ export const EditableProfileCardHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <HStack max justify="between" className={classNames('', {}, [className])}>
+        <HStack
+            max
+            justify="between"
+            className={classNames('', {}, [className])}
+        >
             <Text title={t('Профиль')} />
             {canEdit && (
                 <div>
-                    {readonly
-                        ? (
+                    {readonly ? (
+                        <Button
+                            theme={ButtonTheme.OUTLINE}
+                            onClick={onEdit}
+                            data-testid="EditableProfileCardHeader.EditButton"
+                        >
+                            {t('Редактировать')}
+                        </Button>
+                    ) : (
+                        <HStack gap="8">
+                            <Button
+                                theme={ButtonTheme.OUTLINE_RED}
+                                onClick={onCancelEdit}
+                                data-testid="EditableProfileCardHeader.CancelButton"
+                            >
+                                {t('Отменить')}
+                            </Button>
                             <Button
                                 theme={ButtonTheme.OUTLINE}
-                                onClick={onEdit}
-                                data-testid="EditableProfileCardHeader.EditButton"
+                                onClick={onSave}
+                                data-testid="EditableProfileCardHeader.SaveButton"
                             >
-                                {t('Редактировать')}
+                                {t('Сохранить')}
                             </Button>
-                        )
-                        : (
-                            <HStack gap="8">
-                                <Button
-                                    theme={ButtonTheme.OUTLINE_RED}
-                                    onClick={onCancelEdit}
-                                    data-testid="EditableProfileCardHeader.CancelButton"
-
-                                >
-                                    {t('Отменить')}
-                                </Button>
-                                <Button
-                                    theme={ButtonTheme.OUTLINE}
-                                    onClick={onSave}
-                                    data-testid="EditableProfileCardHeader.SaveButton"
-
-                                >
-                                    {t('Сохранить')}
-                                </Button>
-                            </HStack>
-                        )}
+                        </HStack>
+                    )}
                 </div>
             )}
         </HStack>

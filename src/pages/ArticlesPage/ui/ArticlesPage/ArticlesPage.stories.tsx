@@ -24,12 +24,7 @@ const article = {
         username: 'Ulbi tv',
         avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
     },
-    type: [
-        'IT',
-        'SCIENCE',
-        'POLITICS',
-        'ECONOMICS',
-    ],
+    type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
     blocks: [
         {
             id: '1',
@@ -92,19 +87,19 @@ const article = {
     ],
 } as Article;
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+const Template: ComponentStory<typeof ArticlesPage> = (args) => (
+    <ArticlesPage {...args} />
+);
 export const Normal = Template.bind({});
-Normal.args = {},
-Normal.decorators = [StoreDecorator({ user: { authData: { id: '1' } } })],
-Normal.parameters = {
-    mockData: [
-        {
-            url: `${__API__}/articles?_expand=user&_limit=9&_page=2&_sort=createdAt&_order=asc&q=`,
-            method: 'GET',
-            status: 200,
-            response: [
-                article,
-            ],
-        },
-    ],
-};
+(Normal.args = {}),
+    (Normal.decorators = [StoreDecorator({ user: { authData: { id: '1' } } })]),
+    (Normal.parameters = {
+        mockData: [
+            {
+                url: `${__API__}/articles?_expand=user&_limit=9&_page=2&_sort=createdAt&_order=asc&q=`,
+                method: 'GET',
+                status: 200,
+                response: [article],
+            },
+        ],
+    });

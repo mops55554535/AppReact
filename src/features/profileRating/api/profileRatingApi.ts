@@ -1,15 +1,15 @@
 import { rtkApi } from '@/shared/api/rtkApi';
 import { Rating } from '../../../entities/Rating/model/types/types';
 
-interface GetProfileArg{
-    userId: string,
-    profileId: string
+interface GetProfileArg {
+    userId: string;
+    profileId: string;
 }
-interface RateProfileArg{
-    userId: string,
-    profileId: string
-    rate: number,
-    feedback?: string
+interface RateProfileArg {
+    userId: string;
+    profileId: string;
+    rate: number;
+    feedback?: string;
 }
 const articleProfileApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({

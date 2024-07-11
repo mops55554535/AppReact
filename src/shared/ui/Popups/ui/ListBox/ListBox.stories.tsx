@@ -8,14 +8,19 @@ export default {
     component: ListBox,
     argTypes: {
         backgroundColor: { control: 'color' },
-
     },
     decorators: [
-        (Story) => <div style={{ padding: 100 }} className=""><Story /></div>,
+        (Story) => (
+            <div style={{ padding: 100 }} className="">
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = (args) => (
+    <ListBox {...args} />
+);
 
 export const topLeft = Template.bind({});
 

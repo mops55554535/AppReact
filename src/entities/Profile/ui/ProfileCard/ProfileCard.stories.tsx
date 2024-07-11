@@ -12,8 +12,11 @@ export default {
     },
 } as ComponentMeta<typeof ProfileCard>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
-const avatar = 'https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg';
+const Template: ComponentStory<typeof ProfileCard> = (args) => (
+    <ProfileCard {...args} />
+);
+const avatar =
+    'https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg';
 export const Primary = Template.bind({});
 Primary.args = {
     data: {

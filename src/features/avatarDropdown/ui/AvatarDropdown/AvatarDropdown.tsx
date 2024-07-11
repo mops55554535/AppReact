@@ -4,7 +4,10 @@ import { useCallback } from 'react';
 import { Dropdown } from '@/shared/ui/Popups';
 import { Avatar } from '@/shared/ui/Avatar';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
 } from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
@@ -32,10 +35,14 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
         <Dropdown
             direction="bottom left"
             items={[
-                ...(isAdminPanelAvailable ? [{
-                    content: t('Админка'),
-                    href: getRouteAdmin(),
-                }] : []),
+                ...(isAdminPanelAvailable
+                    ? [
+                          {
+                              content: t('Админка'),
+                              href: getRouteAdmin(),
+                          },
+                      ]
+                    : []),
                 {
                     content: t('Профиль'),
                     href: getRouteProfile(authData.id),
@@ -45,7 +52,9 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
+            trigger={
+                <Avatar fallbackInverted size={30} src={authData.avatar} />
+            }
         />
     );
 };
