@@ -25,12 +25,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const { className } = props;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
-
+    
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
-    }, [dispatch]);
-
+    }, [dispatch]); 
     return (
+      
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
                 data-testid="ArticlesPage"
