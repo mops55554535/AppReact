@@ -46,6 +46,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-sequences' : 'off',
         'no-unused-expressions' : 'off',
+        'react/no-unstable-nested-components': 'warn',
         'i18next/no-literal-string': [
             'error',
             {
