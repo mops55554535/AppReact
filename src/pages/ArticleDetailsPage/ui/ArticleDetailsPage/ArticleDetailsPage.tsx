@@ -34,12 +34,11 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     if (!id) {
         return null;
     }
-const articleRatingCard = toggleFeatures({
-    name: 'isArticleRatingEnabled',
-    on: () => <ArticleRating articleId={id} />,
-    off: () =><Card>{t('Оценка статей скоро появится')}</Card>
-})
-  
+    const articleRatingCard = toggleFeatures({
+        name: 'isArticleRatingEnabled',
+        on: () => <ArticleRating articleId={id} />,
+        off: () => <Card>{t('Оценка статей скоро появится')}</Card>,
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -49,7 +48,7 @@ const articleRatingCard = toggleFeatures({
                 <VStack gap="16">
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    {articleRatingCard} 
+                    {articleRatingCard}
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
