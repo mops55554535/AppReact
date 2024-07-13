@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppRouter } from '@/app/providers/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { getUserInited , initAuthData } from '@/entities/User';
+import { getUserInited, initAuthData } from '@/entities/User';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { PageLoader } from '@/widgets/PageLoader';
@@ -19,8 +19,8 @@ function App() {
         dispatch(initAuthData());
     }, [dispatch]);
 
-    if(!inited){
-        <PageLoader />
+    if (!inited) {
+        <PageLoader />;
     }
 
     return (
