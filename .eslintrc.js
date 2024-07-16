@@ -47,6 +47,8 @@ module.exports = {
         'no-sequences' : 'off',
         'no-unused-expressions' : 'off',
         'react/no-unstable-nested-components': 'warn',
+        'react/button-has-type': 'warn',
+        
         'i18next/no-literal-string': [
             'error',
             {
@@ -62,7 +64,9 @@ module.exports = {
                     'border',
                     'direction',
                     'gap',
-                    'feature'
+                    'feature',
+                    'color',
+                    'variant'
                 ],
             },
         ],
