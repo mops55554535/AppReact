@@ -2,9 +2,6 @@ import { ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Overlay.module.scss';
 
-/**
- * @deprecated
- */
 interface OverlayProps {
     className?: string;
     onClick?: () => void;
