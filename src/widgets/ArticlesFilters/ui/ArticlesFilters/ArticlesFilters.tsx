@@ -49,6 +49,8 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
                     onChange={onChangeSearch}
                     value={search}
                     placeholder={t('Поиск')}
+                    // eslint-disable-next-line i18next/no-literal-string
+                    size='s'
                     addonLeft={<Icon Svg={SearchIcon} />}
                 />
                 <ArticleTypeTabs
