@@ -30,7 +30,7 @@ export interface ProfileCardProps {
     onChangeCurrency?: (currency: Currency) => void;
     onChangeCountry?: (country: Country) => void;
 }
- 
+
 export const ProfileCard = (props: ProfileCardProps) => {
     const { isLoading, error } = props;
     const { t } = useTranslation();

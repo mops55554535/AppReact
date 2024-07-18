@@ -2,9 +2,6 @@ import { CSSProperties, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Skeleton.module.scss';
 
-/**
- * @deprecated
- */
 interface SkeletonProps {
     className?: string;
     height?: string | number;

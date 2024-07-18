@@ -15,7 +15,7 @@ type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
     'value' | 'onChange' | 'readOnly' | 'size'
 >;
-type InputSize = 's' | 'm' | 'l' 
+type InputSize = 's' | 'm' | 'l';
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -25,8 +25,8 @@ interface InputProps extends HTMLInputProps {
     readonly?: boolean;
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
-    label?: string
-    size?: InputSize
+    label?: string;
+    size?: InputSize;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -41,7 +41,7 @@ export const Input = memo((props: InputProps) => {
         addonLeft,
         addonRight,
         label,
-        size ='m',
+        size = 'm',
         ...otherProps
     } = props;
     const ref = useRef<HTMLInputElement>(null);
@@ -74,31 +74,36 @@ export const Input = memo((props: InputProps) => {
     };
 
     const input = (
-        <div className={classNames(cls.InputWrapper, mods, [className, cls[size]])}>
-        <div className={cls.addonLeft}>{addonLeft}</div>
-        <input
-            ref={ref}
-            type={type}
-            value={value}
-            onChange={onChangeHandler}
-            className={cls.input}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            readOnly={readonly}
-            placeholder={placeholder}
-            {...otherProps}
-        />
-        <div className={cls.addonRight}>{addonRight}</div>
-    </div>
-    )
-    if(label){
-        return(
-            <HStack max gap='8'>
+        <div
+            className={classNames(cls.InputWrapper, mods, [
+                className,
+                cls[size],
+            ])}
+        >
+            <div className={cls.addonLeft}>{addonLeft}</div>
+            <input
+                ref={ref}
+                type={type}
+                value={value}
+                onChange={onChangeHandler}
+                className={cls.input}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                readOnly={readonly}
+                placeholder={placeholder}
+                {...otherProps}
+            />
+            <div className={cls.addonRight}>{addonRight}</div>
+        </div>
+    );
+    if (label) {
+        return (
+            <HStack max gap="8">
                 <Text text={label} />
                 {input}
             </HStack>
-        )
+        );
     }
 
-    return input
+    return input;
 });
