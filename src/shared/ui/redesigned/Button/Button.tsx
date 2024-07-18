@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonVariant = 'clear' | 'outline';
+export type ButtonVariant = 'clear' | 'outline' | 'filled';
 
 export type ButtonSize = 'm' | 'l' | 'xl';
 
@@ -25,6 +25,7 @@ export const Button = memo((props: ButtonProps) => {
         disabled,
         fullWidth,
         size = 'm',
+
         ...otherProps
     } = props;
 
