@@ -2,6 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ListBox } from './ListBox';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
     title: 'shared/redesigned/ListBox',
@@ -15,7 +17,9 @@ export default {
                 <Story />
             </div>
         ),
-    ],
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ]
 } as ComponentMeta<typeof ListBox>;
 
 const Template: ComponentStory<typeof ListBox> = (args) => (

@@ -1,6 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Flex } from './Flex';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
 
 export default {
     title: 'shared/redesigned/Flex',
@@ -8,6 +10,10 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ]
 } as ComponentMeta<typeof Flex>;
 
 const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />;

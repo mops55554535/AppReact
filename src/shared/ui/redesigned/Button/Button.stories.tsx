@@ -4,6 +4,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from './Button';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
     title: 'shared/redesigned/Button',
@@ -11,13 +13,18 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [ 
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ],
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const PrimaryFilled = Template.bind({});
+PrimaryFilled.args = {
     children: 'Text',
+    variant:'filled'
 };
 
 export const Clear = Template.bind({});
@@ -53,32 +60,10 @@ OutlineDark.args = {
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const Square = Template.bind({});
-Square.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-};
 
-export const SquareSizeL = Template.bind({});
-SquareSizeL.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'l',
-};
-
-export const SquareSizeXl = Template.bind({});
-SquareSizeXl.args = {
-    children: '>',
-    variant: 'clear',
-    square: true,
-    size: 'xl',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-    children: '>',
+export const OutlineDarkDisabled = Template.bind({});
+OutlineDarkDisabled.args = {
+    children: 'Text',
     variant: 'outline',
     disabled: true,
 };

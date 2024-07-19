@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { UiDesignSwitcher } from './UiDesignSwitcher';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'features/UiDesignSwitcher',
@@ -9,6 +10,9 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators:[
+        StoreDecorator({})
+    ]
 } as ComponentMeta<typeof UiDesignSwitcher>;
 
 const Template: ComponentStory<typeof UiDesignSwitcher> = (args) => (

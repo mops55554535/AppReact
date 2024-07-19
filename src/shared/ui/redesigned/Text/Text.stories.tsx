@@ -4,6 +4,8 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 
 import { Text } from './Text';
 import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
     title: 'shared/redesigned/Text',
@@ -11,6 +13,10 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ]
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;

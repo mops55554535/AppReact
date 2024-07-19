@@ -1,15 +1,16 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Modal } from './Modal';
-import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
-    title: 'shared/Modal',
+    title: 'shared/redesigned/Modal',
     component: Modal,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
@@ -20,11 +21,9 @@ Primary.args = {
     children:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
 };
+Primary.decorators =[
+    NewDesignDecorator,
+    FeaturesFlagsDecorator({isAppRedesigned: true})
+]
 
-export const Dark = Template.bind({});
-Dark.args = {
-    isOpen: true,
-    children:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+

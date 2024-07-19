@@ -3,6 +3,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { AppLink } from './AppLink';
 import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
     title: 'shared/redesigned/AppLink',
@@ -24,25 +26,37 @@ Primary.args = {
     children: 'Text',
     variant: 'primary',
 };
+Primary.decorators = [
+    NewDesignDecorator,
+    FeaturesFlagsDecorator({isAppRedesigned: true})];
 
 export const Red = Template.bind({});
 Red.args = {
     children: 'Text',
     variant: 'red',
 };
+Red.decorators = [
+    NewDesignDecorator,
+    FeaturesFlagsDecorator({isAppRedesigned: true})];
 
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
     children: 'Text',
     variant: 'primary',
 };
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+PrimaryDark.decorators = [
+    NewDesignDecorator,
+    FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ThemeDecorator(Theme.DARK)];
 
-export const SecondaryDark = Template.bind({});
 
 export const RedDark = Template.bind({});
 RedDark.args = {
     children: 'Text',
     variant: 'red',
 };
-RedDark.decorators = [ThemeDecorator(Theme.DARK)];
+RedDark.decorators = [
+    NewDesignDecorator,
+    FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ThemeDecorator(Theme.DARK)
+];

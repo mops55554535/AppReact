@@ -3,13 +3,19 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
 import { Tabs } from './Tabs';
+import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 
 export default {
-    title: 'shared/Tabs',
+    title: 'shared/redesigned/Tabs',
     component: Tabs,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({isAppRedesigned: true}),
+    ]
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;

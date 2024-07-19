@@ -78,7 +78,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
-        'arrow-body-style': 'off',
+        "disallowInList": 'true',
         'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
         'ulbi-tv-plugin/layer-imports': [
             'error',
