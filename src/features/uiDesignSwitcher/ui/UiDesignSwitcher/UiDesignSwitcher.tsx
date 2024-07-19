@@ -34,6 +34,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
 
     const onChange = async (value: string) => {
         if (authData) {
+            
             setIsLoading(true);
             await dispatch(
                 updateFeatureFlag({
@@ -51,7 +52,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
         <HStack>
             <Text text={t('Вариант интерфейса')} />
             {isLoading ? (
-                <Skeleton width={100} height={40} />
+                <Skeleton width={100} height={40} border='34px' />
             ) : (
                 <ListBox
                     onChange={onChange}
