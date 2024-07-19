@@ -19,7 +19,7 @@ import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import {
     ArticleBlockType,
     ArticleView,
-} from '../../../model/consts/Articleconsts';
+} from '../../../model/consts/ArticleConsts';
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;

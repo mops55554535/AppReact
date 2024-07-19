@@ -1,5 +1,5 @@
 import { ArticleBlock } from '../../model/types/article';
-import { ArticleBlockType } from '../../model/consts/articleConsts';
+import { ArticleBlockType } from '../../model/consts/ArticleConsts';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import cls from './ArticleDetails.module.scss';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
