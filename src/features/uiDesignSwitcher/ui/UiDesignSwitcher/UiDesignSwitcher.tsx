@@ -21,7 +21,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
     const dispatch = useAppDispatch();
     const authData = useSelector(getUserAuthData);
     const [isLoading, setIsLoading] = useState(false);
-    const forceUpdate = useForceUpdate()
+    const forceUpdate = useForceUpdate();
     const items = [
         {
             content: t('Новый'),
@@ -35,7 +35,6 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
 
     const onChange = async (value: string) => {
         if (authData) {
-            
             setIsLoading(true);
             await dispatch(
                 updateFeatureFlag({
@@ -46,7 +45,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
                 }),
             ).unwrap();
             setIsLoading(false);
-            forceUpdate()
+            forceUpdate();
         }
     };
 
@@ -54,7 +53,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
         <HStack>
             <Text text={t('Вариант интерфейса')} />
             {isLoading ? (
-                <Skeleton width={100} height={40} border='34px' />
+                <Skeleton width={100} height={40} border="34px" />
             ) : (
                 <ListBox
                     onChange={onChange}

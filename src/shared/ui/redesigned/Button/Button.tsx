@@ -17,7 +17,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     fullWidth?: boolean;
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
-    color?: ButtonColor
+    color?: ButtonColor;
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -31,7 +31,7 @@ export const Button = memo((props: ButtonProps) => {
         size = 'm',
         addonLeft,
         addonRight,
-        color = "normal",
+        color = 'normal',
         ...otherProps
     } = props;
 

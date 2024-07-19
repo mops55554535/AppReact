@@ -14,7 +14,7 @@ interface ArticleAdditionalInfoProps {
     createdAt: string;
     views: number;
     onEdit: () => void;
-}   
+}
 
 export const ArticleAdditionalInfo = memo(
     (props: ArticleAdditionalInfoProps) => {

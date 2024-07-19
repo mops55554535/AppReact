@@ -10,10 +10,10 @@ interface DetailsContainerProps {
 export const DetailsContainer = (props: DetailsContainerProps) => {
     const { t } = useTranslation();
     const { id } = useParams<{ id: string }>();
-const {className} = props
+    const { className } = props;
     return (
-        <Card max border='partial' className={className} padding="24">
-          <ArticleDetails id={id} />
+        <Card max border="partial" className={className} padding="24">
+            <ArticleDetails id={id} />
         </Card>
     );
 };
