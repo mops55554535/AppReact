@@ -841,7 +841,7 @@
       },
       "avatar": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1056,6 +1056,12 @@
       "articleId": "4",
       "rate": 4,
       "id": "i-uGow9"
+    },
+    {
+      "userId": "1",
+      "articleId": "16",
+      "rate": 4,
+      "id": "2YMjVzM"
     }
   ],
   "profile-ratings": [

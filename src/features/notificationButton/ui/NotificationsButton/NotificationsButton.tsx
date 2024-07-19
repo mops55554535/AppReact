@@ -5,7 +5,7 @@ import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
 import NotificationIconDeprecated from '@/shared/assets/icons/notification-20-20.svg';
 import { NotificationList } from '@/entities/Notification';
 import { Popover as PopoverDeprecated } from '@/shared/ui/deprecated/Popups';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 import cls from './NotificationsButton.module.scss';
 import {
     Button as ButtonDeprecated,
