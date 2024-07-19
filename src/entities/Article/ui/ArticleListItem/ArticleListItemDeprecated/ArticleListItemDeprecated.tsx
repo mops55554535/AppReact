@@ -9,7 +9,7 @@ import { ArticleTextBlock } from '../../../model/types/article';
 import {
     ArticleView,
     ArticleBlockType,
-} from '../../../model/consts/ArticleConsts';
+} from '../../../model/consts/articleConsts';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';

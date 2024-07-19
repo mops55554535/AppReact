@@ -5,7 +5,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import {
     ArticleType,
     ArticleBlockType,
-} from '../../model/consts/ArticleConsts';
+} from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
