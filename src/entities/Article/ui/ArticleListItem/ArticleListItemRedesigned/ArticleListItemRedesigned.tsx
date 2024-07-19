@@ -23,12 +23,16 @@ import {
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
-    const { t } = useTranslation(); 
+    const { t } = useTranslation();
 
     const userInfo = (
         <>
-            <Avatar size={32} src={article.user.avatar} className={cls.avatar} />
-            <Text bold text={article.user.username} /> 
+            <Avatar
+                size={32}
+                src={article.user.avatar}
+                className={cls.avatar}
+            />
+            <Text bold text={article.user.username} />
         </>
     );
     const views = (
@@ -59,7 +63,6 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                         <Text text={article.createdAt} />
                     </HStack>
                     <Text title={article.title} bold />
-        
                     <Text title={article.subtitle} size="s" />
                     <AppImage
                         fallback={<Skeleton width="100%" height={250} />}
@@ -99,9 +102,9 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                 cls[view],
             ])}
         >
-            <Card className={cls.card} border="round" padding='0'>
+            <Card className={cls.card} border="round" padding="0">
                 <AppImage
-                    fallback={<Skeleton width={200} height={200} />}
+                    fallback={<Skeleton width="100%" height={200} />}
                     alt={article.title}
                     src={article.img}
                     className={cls.img}

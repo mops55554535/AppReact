@@ -841,7 +841,7 @@
       },
       "avatar": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg",
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_orange_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -1062,6 +1062,12 @@
       "articleId": "16",
       "rate": 4,
       "id": "2YMjVzM"
+    },
+    {
+      "userId": "1",
+      "articleId": "wsSZFxT",
+      "rate": 5,
+      "id": "A2BWKNW"
     }
   ],
   "profile-ratings": [
