@@ -12,7 +12,7 @@ export const DetailsContainer = (props: DetailsContainerProps) => {
     const { id } = useParams<{ id: string }>();
 const {className} = props
     return (
-        <Card className={className} padding="24">
+        <Card max border='partial' className={className} padding="24">
           <ArticleDetails id={id} />
         </Card>
     );

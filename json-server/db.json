@@ -841,7 +841,7 @@
       },
       "avatar": "https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg",
       "jsonSettings": {
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -900,7 +900,7 @@
       "first": "timur13131313",
       "lastname": "ulbi",
       "age": 465,
-      "currency": "RUB",
+      "currency": "EUR",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
