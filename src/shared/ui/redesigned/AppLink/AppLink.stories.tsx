@@ -28,7 +28,8 @@ Primary.args = {
 };
 Primary.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true})];
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+];
 
 export const Red = Template.bind({});
 Red.args = {
@@ -37,7 +38,8 @@ Red.args = {
 };
 Red.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true})];
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+];
 
 export const PrimaryDark = Template.bind({});
 PrimaryDark.args = {
@@ -46,9 +48,9 @@ PrimaryDark.args = {
 };
 PrimaryDark.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ThemeDecorator(Theme.DARK)];
-
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ThemeDecorator(Theme.DARK),
+];
 
 export const RedDark = Template.bind({});
 RedDark.args = {
@@ -57,6 +59,6 @@ RedDark.args = {
 };
 RedDark.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ThemeDecorator(Theme.DARK)
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ThemeDecorator(Theme.DARK),
 ];

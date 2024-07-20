@@ -14,10 +14,9 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-   
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ]
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof Skeleton>;
 
 const Template: ComponentStory<typeof Skeleton> = (args) => (

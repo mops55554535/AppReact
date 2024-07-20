@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof ThemeSwitcher> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [ StoreDecorator({}), ThemeDecorator(Theme.DARK)];
+Normal.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];
 
 export const Dark = Template.bind({});
 Dark.args = {};

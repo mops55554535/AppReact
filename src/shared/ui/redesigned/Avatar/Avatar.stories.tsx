@@ -22,7 +22,7 @@ Primary.args = {
 };
 Primary.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true}),
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
 ];
 export const Small = Template.bind({});
 Small.args = {
@@ -31,5 +31,5 @@ Small.args = {
 };
 Small.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true}),
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
 ];

@@ -13,24 +13,25 @@ export default {
 } as ComponentMeta<typeof CommentCard>;
 
 const normalArgs = {
-    comment:{
+    comment: {
         id: '1',
         text: 'hello world',
         user: { id: '1', username: 'Vasya' },
-    }
-}
-
+    },
+};
 
 const Template: ComponentStory<typeof CommentCard> = (args) => (
     <CommentCard {...args} />
 );
 
 export const Normal = Template.bind({});
-Normal.args = normalArgs
+Normal.args = normalArgs;
 
-export const NormalRedesigned = Template.bind({})
-NormalRedesigned.args = normalArgs
-NormalRedesigned.decorators = [FeaturesFlagsDecorator({isAppRedesigned:true})]
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.args = normalArgs;
+NormalRedesigned.decorators = [
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+];
 
 export const Loading = Template.bind({});
 Loading.args = {

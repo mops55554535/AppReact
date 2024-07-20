@@ -10,9 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators:[
-        StoreDecorator({})
-    ]
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof UiDesignSwitcher>;
 
 const Template: ComponentStory<typeof UiDesignSwitcher> = (args) => (

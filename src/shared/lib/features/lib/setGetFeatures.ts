@@ -9,7 +9,7 @@ let featureFlags: FeatureFlags = {
     ...defaultFeatures,
 };
 
-// context 
+// context
 // state
 // reload page
 // костыль

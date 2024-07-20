@@ -18,8 +18,8 @@ export default {
             </div>
         ),
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ]
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof ListBox>;
 
 const Template: ComponentStory<typeof ListBox> = (args) => (

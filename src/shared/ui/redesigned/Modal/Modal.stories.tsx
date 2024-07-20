@@ -10,7 +10,10 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-
+    decorators: [
+        NewDesignDecorator,
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
@@ -21,9 +24,3 @@ Primary.args = {
     children:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
 };
-Primary.decorators =[
-    NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true})
-]
-
-

@@ -7,7 +7,8 @@ import { ProfileCard } from './ProfileCard';
 import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
 import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
 
-const avatar = 'https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg';
+const avatar =
+    'https://i.pinimg.com/236x/b6/fb/66/b6fb662c518be08f012bb492174a9d47.jpg';
 export default {
     title: 'entities/ProfileCard',
     component: ProfileCard,
@@ -16,15 +17,15 @@ export default {
     },
     decorators: [
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ]
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof ProfileCard>;
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => (
     <ProfileCard {...args} />
 );
 
-const PrimaryArgs =  {
+const PrimaryArgs = {
     data: {
         username: 'admin',
         age: 22,
@@ -37,19 +38,17 @@ const PrimaryArgs =  {
     },
 };
 export const Primary = Template.bind({});
-Primary.args =PrimaryArgs
+Primary.args = PrimaryArgs;
 
 export const PrimaryRedesigned = Template.bind({});
-PrimaryRedesigned.args =PrimaryArgs 
-PrimaryRedesigned.decorators = [ 
+PrimaryRedesigned.args = PrimaryArgs;
+PrimaryRedesigned.decorators = [
     NewDesignDecorator,
-    FeaturesFlagsDecorator({isAppRedesigned: true})
-]
+    FeaturesFlagsDecorator({ isAppRedesigned: true }),
+];
 
 export const withError = Template.bind({});
-withError.args = {
-    error: 'true',
-};
+withError.args = { error: 'true' };
 
 export const Loading = Template.bind({});
 Loading.args = {

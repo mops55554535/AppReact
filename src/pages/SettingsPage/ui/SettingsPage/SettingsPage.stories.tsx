@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import SettingsPage from "./SettingsPage"
+import SettingsPage from './SettingsPage';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
@@ -10,10 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators:[
-         StoreDecorator({})
-    ]
-   
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof SettingsPage>;
 
 const Template: ComponentStory<typeof SettingsPage> = (args) => (

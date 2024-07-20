@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import SvgIcon from '../../../assets/icons/copy.svg'
+import SvgIcon from '../../../assets/icons/copy.svg';
 import { Icon } from './Icon';
 import { NewDesignDecorator } from '@/shared/config/storybook/newDesignDecorator/newDesignDecorator';
 import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator';
@@ -18,8 +18,8 @@ export default {
             </div>
         ),
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ]
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof Icon>;
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
@@ -29,5 +29,5 @@ Normal.args = {
     Svg: SvgIcon,
     width: 30,
     height: 30,
-    clickable: true
+    clickable: true,
 };

@@ -12,14 +12,14 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [ 
+    decorators: [
         (Story) => (
             <div style={{ padding: 100 }} className="">
                 <Story />
             </div>
         ),
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
     ],
 } as ComponentMeta<typeof Card>;
 

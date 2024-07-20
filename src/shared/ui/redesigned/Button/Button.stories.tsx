@@ -13,9 +13,9 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [ 
+    decorators: [
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
     ],
 } as ComponentMeta<typeof Button>;
 
@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const PrimaryFilled = Template.bind({});
 PrimaryFilled.args = {
     children: 'Text',
-    variant:'filled'
+    variant: 'filled',
 };
 
 export const Clear = Template.bind({});
@@ -59,7 +59,6 @@ OutlineDark.args = {
     variant: 'outline',
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
-
 
 export const OutlineDarkDisabled = Template.bind({});
 OutlineDarkDisabled.args = {

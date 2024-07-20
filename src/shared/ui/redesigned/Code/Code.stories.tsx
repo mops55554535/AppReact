@@ -18,8 +18,8 @@ export default {
             </div>
         ),
         NewDesignDecorator,
-        FeaturesFlagsDecorator({isAppRedesigned: true}),
-    ]
+        FeaturesFlagsDecorator({ isAppRedesigned: true }),
+    ],
 } as ComponentMeta<typeof Code>;
 
 const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
