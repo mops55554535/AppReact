@@ -7,4 +7,4 @@
 
 - Components
 
-`ArticleRecommendationsList` - фича рекоммендаций статьей
+`ArticleViewSelector` - фича с выбором отображения статей 

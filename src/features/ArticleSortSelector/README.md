@@ -7,4 +7,4 @@
 
 - Components
 
-`ArticleRecommendationsList` - фича рекоммендаций статьей
+`ArticleRecommendationsList` - фича фильтрации статьей

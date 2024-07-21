@@ -1020,6 +1020,13 @@
             "articleId": "13",
             "rate": 3,
             "id": "GAubtTV"
+        },
+        {
+            "userId": "2",
+            "articleId": "11",
+            "rate": 4,
+            "feedback": "",
+            "id": "oiIBqea"
         }
     ],
     "profile-ratings": [

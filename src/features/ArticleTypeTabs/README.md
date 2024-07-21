@@ -7,4 +7,4 @@
 
 - Components
 
-`ArticleRecommendationsList` - фича рекоммендаций статьей
+`ArticleTypeTabs` - фича с выбором типа статей 
