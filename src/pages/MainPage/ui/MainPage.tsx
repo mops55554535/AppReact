@@ -25,7 +25,7 @@ const MainPage = () => {
     if (!userName || !userRoles) {
         return ( 
         <>
-        <h3 >{t('Главная страница')}</h3>
+        <h3 data-testid="MainPage" >{t('Главная страница')}  </h3>
         <h4>{t('Вы можете войти как Admin, логин admin пароль - 123, или как User, логин user пароль - 123')}</h4>
         </>
     )
@@ -33,7 +33,7 @@ const MainPage = () => {
 
     return (
 
-        <div className="main-page" data-testid="MainPage" >
+        <div className="main-page"  >
             <h3>{t('Главная страница')}</h3>
             <p>{t(`Вы вошли в профиль - ${userName}, роль на сайте - ${userRoles}`)}</p>
             <p>
