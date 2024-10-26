@@ -1,3 +1,4 @@
 {
-    "vs-code-prettier-eslint.prettierLast": true
+    "vs-code-prettier-eslint.prettierLast": true,
+    "i18next.i18nPaths": "c:/Users/user/Documents/ReactApp2/AppReact/public/locales,c:/Users/user/Documents/ReactApp2/AppReact/src/shared/config/i18n"
 }
